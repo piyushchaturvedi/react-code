@@ -2,7 +2,7 @@ import Layout from "../components/MyLayout";
 import HeaderSecond from "../components/HeaderSecond";
 import { useForm } from "react-hook-form";
 import { Alert } from 'react-bootstrap';
-const Add = () => {
+const List = () => {
   const { register, handleSubmit, errors } = useForm();
 
     // function to output form data
@@ -183,137 +183,90 @@ const Add = () => {
           </div>
           {/* /.row*/}
           <div className="row">
-            <div className="col-md-12">
-              <div className="card">
-                <div className="card-header">
-                  <strong>Basic Form</strong> Elements
-                </div>
-                <div className="card-body">
-                  <form
-                    className="form-horizontal"
-                    action
-                    method="post"
-                    encType="multipart/form-data"
-                    onSubmit={handleSubmit(onSubmit)}
-                  >
-                    <div className="form-group row">
-                      <label className="col-md-3 col-form-label" htmlFor="text-input">
-                        Text Input
-                      </label>
-                      <div className="col-md-9">
-                        <input
-                          ref={register}
-                          className="form-control"
-                          id="text-input"
-                          type="text"
-                          name="name"
-                          placeholder="Text"
-                        />
-                        <span className="help-block">This is a help text</span>
-                      </div>
-                    </div>
-                    
-                    
-                   
-                    <div className="form-group row">
-                      <label className="col-md-3 col-form-label" htmlFor="textarea-input">
-                        Textarea
-                      </label>
-                      <div className="col-md-9">
-                        <textarea
-                        ref={register}
-                          className="form-control"
-                          id="textarea-input"
-                          name="address"
-                          rows={9}
-                          placeholder="Content.."
-                          defaultValue={""}
-                        />
-                      </div>
-                    </div>
-                    <div className="form-group row">
-                      <label className="col-md-3 col-form-label" htmlFor="select1">
-                        Country
-                      </label>
-                      <div className="col-md-9">
-                        <select className="form-control"  ref={register} id="select1" name="country">
-                          <option >Please select</option>
-                          <option value={'india'}>India</option>
-                          <option value={'usa'}>USA</option>
-                          <option value={'singapore'}>Singapore</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div className="form-group row">
-                      <label className="col-md-3 col-form-label">Radios</label>
-                      <div className="col-md-9 col-form-label">
-                        <div className="form-check">
-                          <input
-                            className="form-check-input"
-                            id="radio1"
-                            ref={register}
-                            type="radio"
-                            defaultValue="radio1"
-                            name="radios"
-                          />
-                          <label className="form-check-label" htmlFor="radio1">
-                            Male
-                          </label>
-                        </div>
-                        <div className="form-check">
-                          <input
-                            className="form-check-input"
-                            id="radio2"
-                            ref={register}
-                            type="radio"
-                            defaultValue="radio2"
-                            name="radios"
-                          />
-                          <label className="form-check-label" htmlFor="radio2">
-                           Female
-                          </label>
-                        </div>
-                        
-                      </div>
-                    </div>
-                    <div className="form-group row">
-                      <label className="col-md-3 col-form-label">Hobbies</label>
-                      <div className="col-md-9 col-form-label">
-                        <div className="form-check checkbox">
-                          <input
-                            className="form-check-input"
-                            id="check1"
-                            ref={register}
-                            type="checkbox"
-                            name="cricket"
-                          />
-                          <label className="form-check-label" htmlFor="check1">
-                            Cricket
-                          </label>
-                        </div>
-                        <div className="form-check checkbox">
-                          <input
-                            className="form-check-input"
-                            id="check2"
-                            ref={register}
-                            type="checkbox"
-                            name="football"
-                          />
-                          <label className="form-check-label" htmlFor="check2">
-                            Football
-                          </label>
-                        </div>
-                        <div class="card-footer">
-                      <button class="btn btn-sm btn-primary" type="submit"> Submit</button>
-                      
-                    </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-        </div>
+  <div className="col-lg-12">
+    <div className="card">
+      <div className="card-header">
+        <i className="fa fa-align-justify" /> Combined All Table
+      </div>
+      <div className="card-body">
+        <table className="table table-responsive-sm table-bordered table-striped table-sm">
+          <thead>
+            <tr>
+              <th>Username</th>
+              <th>Date registered</th>
+              <th>Role</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Vishnu Serghei</td>
+              <td>2012/01/01</td>
+              <td>Member</td>
+              <td>
+                <span className="badge badge-success">Edit</span>
+                <span className="badge badge-danger">Delete</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Zbyněk Phoibos</td>
+              <td>2012/02/01</td>
+              <td>Staff</td>
+              <td>
+              <span className="badge badge-success">Edit</span>
+                <span className="badge badge-danger">Delete</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Einar Randall</td>
+              <td>2012/02/01</td>
+              <td>Admin</td>
+              <td>
+              <span className="badge badge-success">Edit</span>
+                <span className="badge badge-danger">Delete</span>
+              </td>
+            </tr>
+            </tbody>
+        </table>
+        <nav>
+          <ul className="pagination">
+            <li className="page-item">
+              <a className="page-link" href="#">
+                Prev
+              </a>
+            </li>
+            <li className="page-item active">
+              <a className="page-link" href="#">
+                1
+              </a>
+            </li>
+            <li className="page-item">
+              <a className="page-link" href="#">
+                2
+              </a>
+            </li>
+            <li className="page-item">
+              <a className="page-link" href="#">
+                3
+              </a>
+            </li>
+            <li className="page-item">
+              <a className="page-link" href="#">
+                4
+              </a>
+            </li>
+            <li className="page-item">
+              <a className="page-link" href="#">
+                Next
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  {/* /.col*/}
+</div>;
 
         </div>
       </div>
@@ -333,4 +286,4 @@ const Add = () => {
   </Layout>
   )
 }
-export default Add;
+export default List;

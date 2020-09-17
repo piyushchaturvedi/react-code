@@ -16,6 +16,10 @@ const UsersSchema = new mongoose.Schema({
     type: String,
     default: null
   },
+  hobbies:{
+    type:String,
+    default:null
+  },
   created_at: {
     type: String,
     default: Date.now

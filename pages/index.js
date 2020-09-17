@@ -1114,6 +1114,7 @@ const Index = props => (
         </div>
       </div>
     </main>
+    
     <footer className="c-footer">
       <div>
         <a href="https://coreui.io">CoreUI</a> © 2020 creativeLabs.
