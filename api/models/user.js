@@ -12,11 +12,15 @@ const UsersSchema = new mongoose.Schema({
     type: String,
     default: null
   },
-  gender: {
+  radios: {
     type: String,
     default: null
   },
-  hobbies:{
+  cricket:{
+    type:String,
+    default:null
+  },
+  football:{
     type:String,
     default:null
   },

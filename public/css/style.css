@@ -27,6 +27,10 @@
   --dark: #636f83;
 }
 
+.help-block{
+  color:#dc3545;s
+}
+
 .c-app {
   overflow-x: hidden;
   color: #3c4b64;

@@ -9,6 +9,7 @@ const List = () => {
     // we need to pass it to onSubmit of form element
   const onSubmit = formData => {
     alert(JSON.stringify(formData))
+    //console.log(errors);
   }
   return (
   <Layout>

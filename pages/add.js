@@ -1,7 +1,9 @@
 import Layout from "../components/MyLayout";
 import HeaderSecond from "../components/HeaderSecond";
 import { useForm } from "react-hook-form";
-import { Alert } from 'react-bootstrap';
+import {API_URL} from "../config/const";
+import axios from 'axios';
+
 const Add = () => {
   const { register, handleSubmit, errors } = useForm();
 
@@ -9,6 +11,11 @@ const Add = () => {
     // we need to pass it to onSubmit of form element
   const onSubmit = formData => {
     alert(JSON.stringify(formData))
+    axios.post(API_URL+'add', formData, {headers: {'Content-Type': 'application/x-www-form-urlencoded'}}).then(response => {
+     console.log(response);
+    }).catch(error => {
+      console.log(error)
+    });
   }
   return (
   <Layout>
@@ -202,33 +209,31 @@ const Add = () => {
                       </label>
                       <div className="col-md-9">
                         <input
-                          ref={register}
+                          ref={register({ required: 'Name is required' })}
                           className="form-control"
                           id="text-input"
                           type="text"
                           name="name"
                           placeholder="Text"
                         />
-                        <span className="help-block">This is a help text</span>
+                        {errors.name && <span className="help-block">{errors.name.message}</span>}
                       </div>
                     </div>
-                    
-                    
-                   
                     <div className="form-group row">
                       <label className="col-md-3 col-form-label" htmlFor="textarea-input">
                         Textarea
                       </label>
                       <div className="col-md-9">
                         <textarea
-                        ref={register}
+                        ref={register({ required: 'Address is required' })}
                           className="form-control"
                           id="textarea-input"
                           name="address"
                           rows={9}
                           placeholder="Content.."
-                          defaultValue={""}
+                          
                         />
+                        {errors.name && <span className="help-block">{errors.address.message}</span>}
                       </div>
                     </div>
                     <div className="form-group row">
@@ -236,12 +241,14 @@ const Add = () => {
                         Country
                       </label>
                       <div className="col-md-9">
-                        <select className="form-control"  ref={register} id="select1" name="country">
-                          <option >Please select</option>
+                        <select className="form-control" ref={register({ required: 'Country is required' })} id="select1" name="country">
+                          <option value="" >Please select</option>
                           <option value={'india'}>India</option>
                           <option value={'usa'}>USA</option>
                           <option value={'singapore'}>Singapore</option>
                         </select>
+                        {console.log(errors)}
+                        {errors.name && <span className="help-block">{errors.country.message}</span>}
                       </div>
                     </div>
                     <div className="form-group row">
@@ -253,7 +260,7 @@ const Add = () => {
                             id="radio1"
                             ref={register}
                             type="radio"
-                            defaultValue="radio1"
+                            defaultValue="male"
                             name="radios"
                           />
                           <label className="form-check-label" htmlFor="radio1">
@@ -266,7 +273,7 @@ const Add = () => {
                             id="radio2"
                             ref={register}
                             type="radio"
-                            defaultValue="radio2"
+                            defaultValue="female"
                             name="radios"
                           />
                           <label className="form-check-label" htmlFor="radio2">

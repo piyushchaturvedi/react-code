@@ -2,6 +2,7 @@ const router = require("express").Router();
 const users = require('./models/user');
 router.post("/add", (req, res) => {
   users.findOne({ name:req.body.name }).count().exec(function (err, resp) {
+    console.log(req.body.name);
     if (resp>0) {
       return res.status(200).send({status:false,msg:'user alredy exits!!'});
     } else {
