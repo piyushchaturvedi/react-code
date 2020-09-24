@@ -9,16 +9,12 @@ const port = process.env.PORT || 4000;
 
 app
   .prepare()
-  .then(() => {
+  .then(async () => {
     const server = express();
     // ********************************************
     //         Start data bodyParser  
     // ********************************************
-    server.use(bodyParser.urlencoded({
-      limit: '50mb',
-      extended: true,
-      parameterLimit: 1000000
-    }));
+    server.use(bodyParser.json());
     // ********************************************
     //         End data bodyParser 
     // ********************************************
@@ -46,6 +42,13 @@ app
     // ********************************************
     server.get("*", (req, res) => {
       return handle(req, res);
+    });
+
+    server.all('/edit/:id', (req, res) => {
+      const params = {
+        id: req.params.id
+      };
+      return app.render(req, res, '/edit', params);
     });
 
     server.listen(port, err => {

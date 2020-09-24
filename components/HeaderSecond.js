@@ -1,10 +1,25 @@
 import Link from "next/link";
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const HeaderSecond = () => (
+  
 
     <header className="c-header c-header-light c-header-fixed c-header-with-subheader">
+    <ToastContainer
+    position="top-right"
+    autoClose={5000}
+    hideProgressBar={false}
+    newestOnTop={false}
+    closeOnClick
+    rtl={false}
+    pauseOnFocusLoss
+    draggable
+    pauseOnHover
+    />
+    {/* Same as */}
+    <ToastContainer />
     <button
       className="c-header-toggler c-class-toggler d-lg-none mfe-auto"
       type="button"

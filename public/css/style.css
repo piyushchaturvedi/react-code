@@ -17233,3 +17233,10 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 /*# sourceMappingURL=style.css.map */
+
+
+html:not([dir="rtl"]) .c-sidebar.c-sidebar-lg-show:not(.c-sidebar-right).c-sidebar-fixed ~ .c-wrapper, html:not([dir="rtl"]) .c-sidebar.c-sidebar-show:not(.c-sidebar-right).c-sidebar-fixed ~ .c-wrapper {
+  margin-left: 256px;
+  width: 1262px;
+  max-width: 100%;
+}

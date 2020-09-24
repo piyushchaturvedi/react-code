@@ -38,19 +38,20 @@ const Sidebar = () => (
       </li>
       <li className="c-sidebar-nav-title">Theme</li>
       <li className="c-sidebar-nav-item">
-        <a className="c-sidebar-nav-link" href="colors.html">
+        <a className="c-sidebar-nav-link" href="/add">
           <svg className="c-sidebar-nav-icon">
             <use xlinkHref="vendors/@coreui/icons/svg/free.svg#cil-drop1" />
           </svg>{" "}
-          Colors
+          Add
         </a>
+         
       </li>
       <li className="c-sidebar-nav-item">
-        <a className="c-sidebar-nav-link" href="typography.html">
+        <a className="c-sidebar-nav-link" href="/list">
           <svg className="c-sidebar-nav-icon">
             <use xlinkHref="vendors/@coreui/icons/svg/free.svg#cil-pencil" />
           </svg>{" "}
-          Typography
+          List
         </a>
       </li>
       <li className="c-sidebar-nav-title">Components</li>
