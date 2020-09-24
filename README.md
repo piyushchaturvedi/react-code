@@ -9,5 +9,5 @@ $ npm i
 ```
 $ npm run dev
 ```
-
-Created by Konstantin Galishnikov for You!
+you need to changes
+Created by piyush chaturvedi for You!

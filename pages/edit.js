@@ -129,11 +129,9 @@ const Add = () => {
                             className="form-check-input"
                             id="radio1"         
                             type="radio"
-                            //checked={getdata.radios=='male'?true:false}
+                             
                             checked={getdata.radios}
-                            //defaultChecked={getdata.radios}
-                            //defaultChecked={getdata.radios === 'male'?'checked':''}
-                            //checked={getdata.radios === 'male'}
+                             
                             onChange={e => setdata({...setdata,[setdata.radios]:e.target.value})}
                             name="radios"
                             value='male'
@@ -142,11 +140,9 @@ const Add = () => {
                           className="form-check-input"
                           id="radio1"         
                           type="radio"
-                          //checked={getdata.radios=='male'?true:false}
-                          //checked={getdata.radios}
+                          
                           defaultChecked=""
-                          //defaultChecked={getdata.radios === 'male'?'checked':''}
-                          //checked={getdata.radios === 'male'}
+                          
                           onChange={e => setdata({...setdata,[setdata.radios]:e.target.value})}
                           name="radios"
                           value='male'
@@ -161,11 +157,7 @@ const Add = () => {
                             className="form-check-input"
                             id="radio2"         
                             type="radio"
-                            //checked={getdata.radios=='male'?true:false}
                             checked={getdata.radios}
-                            //defaultChecked={getdata.radios}
-                            //defaultChecked={getdata.radios === 'male'?'checked':''}
-                            //checked={getdata.radios === 'male'}
                             onChange={e => setdata({...setdata,[setdata.radios]:e.target.value})}
                             name="radios"
                             value='female'
@@ -174,17 +166,12 @@ const Add = () => {
                           className="form-check-input"
                           id="radio2"         
                           type="radio"
-                          //checked={getdata.radios=='male'?true:false}
-                          //checked={getdata.radios}
                           defaultChecked=""
-                          //defaultChecked={getdata.radios === 'male'?'checked':''}
-                          //checked={getdata.radios === 'male'}
                           onChange={e => setdata({...setdata,[setdata.radios]:e.target.value})}
                           name="radios"
                           value='female'
                           ref={register({ required: "Please choose gender" })}
                         />}
-                          
                           <label className="form-check-label" htmlFor="radio2">
                            Female
                           </label>
