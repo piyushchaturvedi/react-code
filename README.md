@@ -1,4 +1,4 @@
-# Simple Next.js application with Redux store
+# Simple Next.js application 
 
 ## Install npm modules
 ```
